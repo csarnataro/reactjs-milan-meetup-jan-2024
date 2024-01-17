@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Open Sans', sans-serif;
+}
+
+#grass-sketch-container > canvas {
+  background-color: darkblue;
+  background: url('./src/assets/night-sky-and-grass.jpg');
+}
+
+
+#compass-sketch-container .p5Canvas {
+  border-radius: 50%;
+}
+
+div.psycho-true #compass-info-container {
+  left: 0;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  font-style: italic;
+  text-shadow: #2C2 4px 1px 15px;
+  /* text-shadow: 2px 2px #558ABB; */
+}
+
+div.psycho-true .gradient span,
+div.psycho-true .gradient span {
+  background: white;
+  background: -webkit-linear-gradient(left, red, orange , yellow, green, cyan, blue, violet);
+  background: -o-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+  background: -moz-linear-gradient(right, red,  orange, yellow, green, cyan, blue, violet);
+  background: linear-gradient(to right,red,  orange , yellow, green, cyan, blue, violet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+@layer base {
+  body {
+    @apply font-normal text-base text-body bg-whiten relative z-1;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .chat-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+  .inbox-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+}
+
+/* third-party libraries CSS */
+
+[x-cloak] {
+  display: none !important;
+}
